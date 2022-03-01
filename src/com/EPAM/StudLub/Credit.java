@@ -45,5 +45,7 @@ private byte interestRate;
     public void setNameOfBank(String nameOfBank) {
         this.nameOfBank = nameOfBank;
     }
+
+
 }
 
