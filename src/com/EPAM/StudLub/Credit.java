@@ -46,9 +46,11 @@ private boolean   earlyRepayment;
     public void setNameOfBank(String nameOfBank) {
         this.nameOfBank = nameOfBank;
     }
-    void repayTheLoan(){
+public void repayTheLoan(){
 System.out.println("В данном кредите нет возможности раннего погашения");
     }
-
+public  void leaveARequest(){
+    System.out.println("Ваша заявка принята на обработку!");
+}
 }
 

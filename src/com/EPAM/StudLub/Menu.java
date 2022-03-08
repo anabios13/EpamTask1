@@ -4,8 +4,13 @@ public class Menu {
     public  void printCase1(){
         System.out.println("1.Просмотр предложений по кредитам");
         System.out.println("2.Выбор предложения по кредиту");
-        System.out.println("3.Увеличение кредитной линии");
+        System.out.println("3.Поиск кредита");
         System.out.println("4.Закончить");
         System.out.println("Ввод: ");
+    }
+    public  void printCaseForRequest(){
+        System.out.println("Оставить заявку на оформление?");
+        System.out.println("1.Да");
+        System.out.println("2.Нет");
     }
 }

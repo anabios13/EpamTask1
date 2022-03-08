@@ -45,6 +45,13 @@ while(flag!=4){
                             + "Первоначальный взнос: " + credit.getRequiredDeposit() + "\n"
                             + "Процентная ставка: " + credit.getInterestRate() + "\n");
                     credit.repayTheLoan();
+                    menu.printCaseForRequest();
+                    byte flagForRequest = scannerForCase2.nextByte();
+                    switch (flagForRequest){
+                        case 1:
+                            credit.leaveARequest();
+                            break;
+                    }
                 }
              else {
                 CreditWithEarlyRepayment credit = new CreditWithEarlyRepayment();
@@ -52,17 +59,23 @@ while(flag!=4){
                 credit.setEarlyRepayment(bufferForEarlyRepaymentValue);
                 credit.setInterestRate((byte) fakeDb.getOffersHashM().get(fakeDb.getArrayOfBankNames()[numberOfBankName]).get(2).get(numberOfOffer));
                 credit.setNameOfOffer((String) fakeDb.getOffersHashM().get(fakeDb.getArrayOfBankNames()[numberOfBankName]).get(0).get(numberOfOffer));
-                credit.setRequiredDeposit((byte) fakeDb.getOffersHashM().get(fakeDb.getArrayOfBankNames()[numberOfBankName]).get(1).get(numberOfOffer));
+                credit.setRequiredDeposit((Integer) fakeDb.getOffersHashM().get(fakeDb.getArrayOfBankNames()[numberOfBankName]).get(1).get(numberOfOffer));
                 System.out.print("Название банка: " + credit.getNameOfBank() +
                         "\n" + "Название предложения: " + credit.getNameOfOffer() +
                         "\n" + "Первоначальный взнос: " + credit.getRequiredDeposit() +
                         "\n" + "Процентная ставка: " + credit.getInterestRate() + "\n");
                 credit.repayTheLoan();
+                menu.printCaseForRequest();
+                byte flagForRequest = scannerForCase2.nextByte();
+                switch (flagForRequest){
+                    case 1:
+                        credit.leaveARequest();
+                            break;
+                }
             }
     }
             else {
          System.out.println(  "У данного банка на данный момент отсутствуют предложения!" );
-         flag= 2;
             }
 
             break;
