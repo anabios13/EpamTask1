@@ -77,10 +77,23 @@ while(flag!=4){
             else {
          System.out.println(  "У данного банка на данный момент отсутствуют предложения!" );
             }
-            scannerForCase2.close();
             break;
 
         case 3:
+            int flagForCase3;
+            menu.printCaseForCase3();
+        Scanner  scannerForCase3 = new Scanner(System.in);
+            flagForCase3 = scannerForCase3.nextInt();
+            switch (flagForCase3){
+                case 1:
+                    break;
+
+                case 2:
+                    break;
+
+                case 3:
+                    break;
+            }
             break;
     }
     menu.printCase1();

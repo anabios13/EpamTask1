@@ -12,5 +12,12 @@ public class Menu {
         System.out.println("Оставить заявку на оформление?");
         System.out.println("1.Да");
         System.out.println("2.Нет");
+        System.out.println("Ввод: ");
+    }
+    public  void printCaseForCase3(){
+        System.out.println("1. Найти предложение с наименьшей кредитной ставкой");
+        System.out.println("2. Найти предложение с наименьшим первоначальным взносом");
+        System.out.println("3. Найти предложения с возможностью досрочного погашения");
+        System.out.println("Ввод: ");
     }
 }

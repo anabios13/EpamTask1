@@ -14,7 +14,6 @@ private boolean   earlyRepayment;
         return earlyRepayment;
     }
 
-
     public byte getInterestRate() {
         return interestRate;
     }
@@ -46,11 +45,14 @@ private boolean   earlyRepayment;
     public void setNameOfBank(String nameOfBank) {
         this.nameOfBank = nameOfBank;
     }
+
 public void repayTheLoan(){
 System.out.println("В данном кредите нет возможности раннего погашения");
     }
+
 public  void leaveARequest(){
     System.out.println("Ваша заявка принята на обработку!");
 }
+
 }
 

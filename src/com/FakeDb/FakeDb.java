@@ -44,7 +44,6 @@ public class FakeDb {
     private String[] arrayOfBankOffers = new String[]{"Credit+", "Major+", "Offer+", "Profit+", "Gold"};
     private String[] arrayOfBankNames = new String[]{"Петбанк", "Итробанк", "Тафбанк", "Ковбанк", "Таскбанк"};
     private HashMap<String, ArrayList<ArrayList<?>>> offersHashM = new HashMap<>();
-    private ArrayList<ArrayList<ArrayList<?>>> bufferForEntities = new ArrayList<>();
     public String[] getArrayOfBankNames() {
         return arrayOfBankNames;
     }
