@@ -4,6 +4,7 @@ public class Credit {
 private String nameOfBank,nameOfOffer;
 private int requiredDeposit;
 private byte interestRate;
+private boolean   earlyRepayment;
 
     public void setEarlyRepayment(boolean earlyRepayment) {
         this.earlyRepayment = earlyRepayment;
@@ -13,7 +14,7 @@ private byte interestRate;
         return earlyRepayment;
     }
 
-    private boolean   earlyRepayment;
+
     public byte getInterestRate() {
         return interestRate;
     }
@@ -45,7 +46,9 @@ private byte interestRate;
     public void setNameOfBank(String nameOfBank) {
         this.nameOfBank = nameOfBank;
     }
-
+    void repayTheLoan(){
+System.out.println("В данном кредите нет возможности раннего погашения");
+    }
 
 }
 

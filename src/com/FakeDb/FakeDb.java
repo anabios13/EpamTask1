@@ -138,5 +138,4 @@ public class FakeDb {
         entities5.add(opportunityToExpandCredit5);
         offersHashM.putIfAbsent(arrayOfBankNames[4],  entities5);
    }
-
 }
