@@ -77,7 +77,7 @@ while(flag!=4){
             else {
          System.out.println(  "У данного банка на данный момент отсутствуют предложения!" );
             }
-
+            scannerForCase2.close();
             break;
 
         case 3:
