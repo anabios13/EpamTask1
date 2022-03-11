@@ -81,17 +81,21 @@ while(flag!=4){
 
         case 3:
             int flagForCase3;
+            Comparator comparator = new Comparator();
             menu.printCaseForCase3();
         Scanner  scannerForCase3 = new Scanner(System.in);
             flagForCase3 = scannerForCase3.nextInt();
             switch (flagForCase3){
                 case 1:
+comparator.compareByInterestRate(fakeDb.getOffersHashM(), fakeDb.getArrayOfBankNames());
                     break;
 
                 case 2:
+                    comparator.compareByRequiredDeposit(fakeDb.getOffersHashM(), fakeDb.getArrayOfBankNames());
                     break;
 
                 case 3:
+comparator.compareByEarlyRepayment(fakeDb.getOffersHashM(), fakeDb.getArrayOfBankNames());
                     break;
             }
             break;

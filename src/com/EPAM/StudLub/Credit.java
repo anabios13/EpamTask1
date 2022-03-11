@@ -10,16 +10,19 @@ private boolean   earlyRepayment;
         this.earlyRepayment = earlyRepayment;
     }
 
-    public boolean isEarlyRepayment() {
-        return earlyRepayment;
-    }
-
     public byte getInterestRate() {
         return interestRate;
     }
 
     public int getRequiredDeposit() {
         return requiredDeposit;
+    }
+
+    public void isEarlyRepayment() {
+        if(earlyRepayment==true)
+      System.out.println("В данном кредите есть возможность раннего погашения");
+        else
+            System.out.println("В данном кредите нет возможности раннего погашения");
     }
 
     public String getNameOfOffer() {
