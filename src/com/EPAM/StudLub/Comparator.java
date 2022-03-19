@@ -4,11 +4,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 
-public class Comparator  {
-  private   Credit credit = new Credit();
+public class Comparator {
+    private Credit credit = new Credit();
+
     public void compareByInterestRate(HashMap<String, ArrayList<ArrayList<?>>> offersHashM, String[] arrayOfBankNames) {
         for (int i = 0; i < arrayOfBankNames.length; i++) {//поиск минимлаьного значения процентной ставки
-            if( !offersHashM.get(arrayOfBankNames[i]).get(2).isEmpty()) {
+            if (!offersHashM.get(arrayOfBankNames[i]).get(2).isEmpty()) {
                 byte bufferForElement = Collections.min((ArrayList<Byte>) offersHashM.get(arrayOfBankNames[i]).get(2));
                 for (int j = 0; j < offersHashM.get(arrayOfBankNames[i]).get(2).size(); j++) {
                     if ((Byte) offersHashM.get(arrayOfBankNames[i]).get(2).get(j) == bufferForElement) {
@@ -26,11 +27,12 @@ public class Comparator  {
                     }
                 }
             }
-            }
         }
+    }
+
     public void compareByRequiredDeposit(HashMap<String, ArrayList<ArrayList<?>>> offersHashM, String[] arrayOfBankNames) {
         for (int i = 0; i < arrayOfBankNames.length; i++) {//поиск минимлаьного значения процентной ставки
-            if( !offersHashM.get(arrayOfBankNames[i]).get(1).isEmpty()) {
+            if (!offersHashM.get(arrayOfBankNames[i]).get(1).isEmpty()) {
                 int bufferForElement = Collections.min((ArrayList<Integer>) offersHashM.get(arrayOfBankNames[i]).get(1));
                 for (int j = 0; j < offersHashM.get(arrayOfBankNames[i]).get(1).size(); j++) {
                     if ((Integer) offersHashM.get(arrayOfBankNames[i]).get(1).get(j) == bufferForElement) {
@@ -50,9 +52,10 @@ public class Comparator  {
             }
         }
     }
+
     public void compareByEarlyRepayment(HashMap<String, ArrayList<ArrayList<?>>> offersHashM, String[] arrayOfBankNames) {
         for (int i = 0; i < arrayOfBankNames.length; i++) {//поиск минимлаьного значения процентной ставки
-            if( !offersHashM.get(arrayOfBankNames[i]).get(3).isEmpty()) {
+            if (!offersHashM.get(arrayOfBankNames[i]).get(3).isEmpty()) {
                 for (int j = 0; j < offersHashM.get(arrayOfBankNames[i]).get(3).size(); j++) {
                     if ((Boolean) offersHashM.get(arrayOfBankNames[i]).get(3).get(j).equals(true)) {
                         credit.setNameOfBank(arrayOfBankNames[i]);
@@ -71,4 +74,4 @@ public class Comparator  {
             }
         }
     }
-    }
+}

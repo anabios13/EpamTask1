@@ -44,11 +44,12 @@ public class FakeDb {
     private String[] arrayOfBankOffers = new String[]{"Credit+", "Major+", "Offer+", "Profit+", "Gold"};
     private String[] arrayOfBankNames = new String[]{"Петбанк", "Итробанк", "Тафбанк", "Ковбанк", "Таскбанк"};
     private HashMap<String, ArrayList<ArrayList<?>>> offersHashM = new HashMap<>();
+
     public String[] getArrayOfBankNames() {
         return arrayOfBankNames;
     }
 
-    private ArrayList RandValueOfArrayList(String[] arrayOfBankOffersParameter,ArrayList<String>buffer) {
+    private ArrayList RandValueOfArrayList(String[] arrayOfBankOffersParameter, ArrayList<String> buffer) {
         buffer.clear();
         byte NumberOfComponents = (byte) ((int) (Math.random() * arrayOfBankOffersParameter.length) + 0);
         for (int i = 0; i < NumberOfComponents; i++)
@@ -63,7 +64,7 @@ public class FakeDb {
     public void CreateFakeDb() {
 
         opportunityToExpandCredit.clear();
-        namesOfOffers = RandValueOfArrayList(arrayOfBankOffers,namesOfOffers);
+        namesOfOffers = RandValueOfArrayList(arrayOfBankOffers, namesOfOffers);
         for (int k = 0; k < namesOfOffers.size(); k++) {//случайные числа процентной ставки, первоначального платежа..
             interestRate.add((byte) ((int) (Math.random() * 10) + 10));
             requiredDeposits.add(((int) (Math.random() * 30) + 100));
@@ -75,10 +76,10 @@ public class FakeDb {
         entities.add(interestRate);
         entities.add(earlyRepayments);
         entities.add(opportunityToExpandCredit);
-        offersHashM.putIfAbsent(arrayOfBankNames[0],  entities);
+        offersHashM.putIfAbsent(arrayOfBankNames[0], entities);
 
 
-        namesOfOffers2=RandValueOfArrayList(arrayOfBankOffers,namesOfOffers2);
+        namesOfOffers2 = RandValueOfArrayList(arrayOfBankOffers, namesOfOffers2);
         for (int k = 0; k < namesOfOffers2.size(); k++) {//случайные числа процентной ставки, первоначального платежа..
             interestRate2.add((byte) ((int) (Math.random() * 10) + 10));
             requiredDeposits2.add(((int) (Math.random() * 30) + 100));
@@ -90,10 +91,10 @@ public class FakeDb {
         entities2.add(interestRate2);
         entities2.add(earlyRepayments2);
         entities2.add(opportunityToExpandCredit2);
-        offersHashM.putIfAbsent(arrayOfBankNames[1],  entities2);
+        offersHashM.putIfAbsent(arrayOfBankNames[1], entities2);
 
 
-        namesOfOffers3= RandValueOfArrayList(arrayOfBankOffers, namesOfOffers3);
+        namesOfOffers3 = RandValueOfArrayList(arrayOfBankOffers, namesOfOffers3);
         for (int k = 0; k < namesOfOffers3.size(); k++) {//случайные числа процентной ставки, первоначального платежа..
             interestRate3.add((byte) ((int) (Math.random() * 10) + 10));
             requiredDeposits3.add(((int) (Math.random() * 30) + 100));
@@ -105,11 +106,10 @@ public class FakeDb {
         entities3.add(interestRate3);
         entities3.add(earlyRepayments3);
         entities3.add(opportunityToExpandCredit3);
-        offersHashM.putIfAbsent(arrayOfBankNames[2],  entities3);
+        offersHashM.putIfAbsent(arrayOfBankNames[2], entities3);
 
 
-
-        namesOfOffers4=  RandValueOfArrayList(arrayOfBankOffers, namesOfOffers4);
+        namesOfOffers4 = RandValueOfArrayList(arrayOfBankOffers, namesOfOffers4);
         for (int k = 0; k < namesOfOffers4.size(); k++) {//случайные числа процентной ставки, первоначального платежа..
             interestRate4.add((byte) ((int) (Math.random() * 10) + 10));
             requiredDeposits4.add(((int) (Math.random() * 30) + 100));
@@ -121,9 +121,9 @@ public class FakeDb {
         entities4.add(interestRate4);
         entities4.add(earlyRepayments4);
         entities4.add(opportunityToExpandCredit4);
-        offersHashM.putIfAbsent(arrayOfBankNames[3],  entities4);
+        offersHashM.putIfAbsent(arrayOfBankNames[3], entities4);
 
-        namesOfOffers5=  RandValueOfArrayList(arrayOfBankOffers,namesOfOffers5);
+        namesOfOffers5 = RandValueOfArrayList(arrayOfBankOffers, namesOfOffers5);
         for (int k = 0; k < namesOfOffers5.size(); k++) {//случайные числа процентной ставки, первоначального платежа..
             interestRate5.add((byte) ((int) (Math.random() * 10) + 10));
             requiredDeposits5.add(((int) (Math.random() * 30) + 100));
@@ -135,6 +135,6 @@ public class FakeDb {
         entities5.add(interestRate5);
         entities5.add(earlyRepayments5);
         entities5.add(opportunityToExpandCredit5);
-        offersHashM.putIfAbsent(arrayOfBankNames[4],  entities5);
-   }
+        offersHashM.putIfAbsent(arrayOfBankNames[4], entities5);
+    }
 }

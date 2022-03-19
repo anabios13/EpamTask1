@@ -1,10 +1,10 @@
 package com.EPAM.StudLub;
 
 public class Credit {
-private String nameOfBank,nameOfOffer;
-private int requiredDeposit;
-private byte interestRate;
-private boolean   earlyRepayment;
+    private String nameOfBank, nameOfOffer;
+    private int requiredDeposit;
+    private byte interestRate;
+    private boolean earlyRepayment;
 
     public void setEarlyRepayment(boolean earlyRepayment) {
         this.earlyRepayment = earlyRepayment;
@@ -19,8 +19,8 @@ private boolean   earlyRepayment;
     }
 
     public void isEarlyRepayment() {
-        if(earlyRepayment==true)
-      System.out.println("В данном кредите есть возможность раннего погашения");
+        if (earlyRepayment == true)
+            System.out.println("В данном кредите есть возможность раннего погашения");
         else
             System.out.println("В данном кредите нет возможности раннего погашения");
     }
@@ -49,13 +49,13 @@ private boolean   earlyRepayment;
         this.nameOfBank = nameOfBank;
     }
 
-public void repayTheLoan(){
-System.out.println("В данном кредите нет возможности раннего погашения");
+    public void repayTheLoan() {
+        System.out.println("В данном кредите нет возможности раннего погашения");
     }
 
-public  void leaveARequest(){
-    System.out.println("Ваша заявка принята на обработку!");
-}
+    public void leaveARequest() {
+        System.out.println("Ваша заявка принята на обработку!");
+    }
 
 }
 
